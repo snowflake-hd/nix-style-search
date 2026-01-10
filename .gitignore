@@ -88,4 +88,4 @@ http-client.private.env.json
 
 /result
 
-*.idea
+*.idea.idea/
