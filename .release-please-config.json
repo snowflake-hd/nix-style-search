@@ -3,7 +3,7 @@
   "release-type": "go",
   "packages": {
     ".": {
-      "package-name": "styled-nix-package-search"
+      "package-name": "nix-style-search"
     }
   },
   "bump-minor-pre-major": true,
