@@ -11,18 +11,17 @@ permissions:
 
 jobs:
   release:
-    permissions: write-all
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Run release-please
         id: release
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         with:
-          config-file: .release-please-config.json
-          manifest-file: .release-please-manifest.json
+          release-type: go
 
       - name: Set up Go
         if: steps.release.outputs.release_created == 'true'
@@ -30,15 +29,19 @@ jobs:
         with:
           go-version: '1.25.x'
 
-      - name: Build binaries (on release)
+      - name: Build binaries
         if: steps.release.outputs.release_created == 'true'
         run: |
-          mkdir -p bin
-          go build -o bin/nix-style-search ./cmd/nix-style-search     
+          mkdir -p dist
 
-      - name: Upload binary artifact
+          GOOS=linux   GOARCH=amd64 go build -o dist/nix-style-search-linux-amd64 ./cmd/nix-style-search
+          GOOS=darwin  GOARCH=amd64 go build -o dist/nix-style-search-darwin-amd64 ./cmd/nix-style-search
+          GOOS=darwin  GOARCH=arm64 go build -o dist/nix-style-search-darwin-arm64 ./cmd/nix-style-search
+          GOOS=windows GOARCH=amd64 go build -o dist/nix-style-search-windows-amd64.exe ./cmd/nix-style-search
+
+      - name: Upload release assets
         if: steps.release.outputs.release_created == 'true'
-        uses: actions/upload-artifact@v4
+        uses: softprops/action-gh-release@v2
         with:
-          name: nix-style-search
-          path: bin/nix-style-search
+          tag_name: ${{ steps.release.outputs.tag_name }}
+          files: dist/*
