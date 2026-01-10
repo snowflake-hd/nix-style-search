@@ -22,7 +22,6 @@ jobs:
         uses: googleapis/release-please-action@v4
         with:
           release-type: go
-          package-name: nix-style-search
 
       - name: Set up Go
         if: steps.release.outputs.release_created == 'true'
