@@ -49,7 +49,7 @@ jobs:
 
       - name: Nix build package
         run: |
-          nix build .#styled-nix-package-search --show-trace
+          nix build .#nix-style-search --show-trace
 
       - name: List Nix build result
         run: |
