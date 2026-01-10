@@ -1,0 +1,57 @@
+name: CI Build & Test
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25.x'
+          check-latest: true
+
+      - name: Go mod download
+        run: |
+          go env
+          go mod download
+
+      - name: Run Go tests
+        run: |
+          go test ./...
+
+      - name: Build Go binary
+        run: |
+          go build -v ./cmd/nix-style-search
+
+      - name: Set up Nix
+        uses: cachix/install-nix-action@v26
+        with:
+          nix_path: nixpkgs=channel:nixos-24.11
+
+      - name: Nix info
+        run: |
+          nix --version
+          nix flake metadata
+
+      - name: Nix flake checks
+        run: |
+          nix flake check --show-trace
+
+      - name: Nix build package
+        run: |
+          nix build .#styled-nix-package-search --show-trace
+
+      - name: List Nix build result
+        run: |
+          ls -la result
+          file result
