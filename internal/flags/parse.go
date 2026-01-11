@@ -5,6 +5,9 @@ import (
 	"fmt"
 )
 
+// DefineFlags parses command-line flags and returns true if the application
+// should continue running, or false if it should exit early (for example,
+// after displaying help text).
 func DefineFlags() bool {
 	help := false
 	flag.BoolVar(&help, "help", false, "Show help")
