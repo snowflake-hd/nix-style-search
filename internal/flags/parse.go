@@ -13,8 +13,11 @@ func DefineFlags() bool {
 	flag.Parse()
 
 	if help {
-		fmt.Println("Usage: nix-style-search")
+		fmt.Println("Usage: nix-style-search [options]")
 		fmt.Println("A command-line tool for searching Nix packages.")
+		fmt.Println()
+		fmt.Println("Options:")
+		flag.PrintDefaults()
 		return false
 	}
 
