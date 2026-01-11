@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-
 	shouldStart := flags.HandleFlags()
 
 	if !shouldStart {
