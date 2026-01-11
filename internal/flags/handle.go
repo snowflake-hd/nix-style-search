@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func DefineFlags() bool {
+func HandleFlags() bool {
 	help := flag.Bool("help", false, "Show help")
 
 	flag.Parse()

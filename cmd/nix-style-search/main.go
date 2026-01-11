@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	shouldStart := flags.DefineFlags()
+	shouldStart := flags.HandleFlags()
 
 	if !shouldStart {
 		return
