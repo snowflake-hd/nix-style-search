@@ -14,7 +14,7 @@
     packages.${system} = {
       ${appName} = pkgs.buildGoModule rec {
         pname = appName;
-        version = "1.0.0";
+        version = "1.0.1";
         src = ./.;
 
        vendorHash = "sha256-NICwZgVyJ9q9Eg0b7vU0QJSkyAaK+BW0fPFGZXtDkbk=";
