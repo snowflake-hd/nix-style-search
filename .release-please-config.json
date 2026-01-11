@@ -4,7 +4,8 @@
   "packages": {
     ".": {
       "package-name": "nix-style-search",
-      "default-bump": "minor"
+      "default-bump": "patch",
+      "include-commits-without-labels": true
     }
   },
   "bump-minor-pre-major": true,
