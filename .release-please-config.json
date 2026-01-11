@@ -3,7 +3,8 @@
   "release-type": "go",
   "packages": {
     ".": {
-      "package-name": "nix-style-search"
+      "package-name": "nix-style-search",
+      "default-bump": "minor"
     }
   },
   "bump-minor-pre-major": true,
@@ -17,4 +18,3 @@
     { "type": "chore", "section": "Chores" }
   ]
 }
-
