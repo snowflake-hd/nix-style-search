@@ -5,9 +5,7 @@ import (
 	"fmt"
 )
 
-// HandleFlags parses command-line flags and returns true if the application
-// should continue running, or false if it should exit early (for example,
-// after displaying help text).
+// HandleFlags parses command-line flags and returns true if the application should run.
 func HandleFlags() bool {
 	help := false
 	flag.BoolVar(&help, "help", false, "Show help")
