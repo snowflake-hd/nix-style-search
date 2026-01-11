@@ -87,5 +87,5 @@ http-client.private.env.json
 
 
 /result
-
+/vendor
 /.idea
