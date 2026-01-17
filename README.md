@@ -11,9 +11,19 @@ StyleSearch is a command-line tool that provides a prettier, interactive alterna
 - View package details (version, description, homepage, license, etc.)
 - Copy package identifiers directly to your clipboard
 
-## Learning Project
+## Screenshots
 
-This is a **learning project** as I'm still learning Go. It may contain bugs, rough edges, or non-idiomatic Go code. Feedback and contributions are welcome!
+**Index Selection Screen:**
+![Index Selection](images/index_selection.png)
+
+**Empty Search:**
+![Empty Search](images/empty_search.png)
+
+**Search Results (No Details):**
+![Search Results](images/search_no_details.png)
+
+**Search Results (With Details):**
+![Search With Details](images/search_with_details.png)
 
 ## Features
 

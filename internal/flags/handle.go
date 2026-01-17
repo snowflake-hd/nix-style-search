@@ -14,13 +14,19 @@ func HandleFlags() bool {
 	flag.Parse()
 
 	if help {
-		fmt.Println("Usage: nix-style-search [options]")
-		fmt.Println("A command-line tool for searching Nix packages.")
-		fmt.Println()
-		fmt.Println("Options:")
-		flag.PrintDefaults()
+		printHelp()
 		return false
 	}
 
 	return true
+}
+
+func printHelp() {
+	fmt.Println("Usage: nix-style-search [options]")
+	fmt.Println("A command-line tool for searching Nix packages.")
+	fmt.Println()
+	fmt.Println("Options:")
+	fmt.Println("  -h, --help\t\tShow help")
+	fmt.Println()
+	fmt.Println("While searching for packages use <tab> to see more details about the selected package.")
 }
