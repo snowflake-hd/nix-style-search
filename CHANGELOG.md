@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.1](https://github.com/snowflake-hd/nix-style-search/compare/v1.1.0...v1.1.1) (2026-01-17)
+
+
+### Bug Fixes
+
+* enhance release process by adding support for additional Linux architectures and checksum generation ([1ec2983](https://github.com/snowflake-hd/nix-style-search/commit/1ec298346bb3ae98424a07eab187fb463a515951))
+* enhance usage information and add help output for nix-style-search ([5560478](https://github.com/snowflake-hd/nix-style-search/commit/5560478d1e944d1a608ad0336e3b97af8a2d44d9))
+* enhance usage information and add help output for nix-style-search ([730edaa](https://github.com/snowflake-hd/nix-style-search/commit/730edaa0ab86692866c9ae667d83c3996f433397))
+* update .gitignore to include vendor directory and bump version to 1.1.0 in flake.nix ([f451b8b](https://github.com/snowflake-hd/nix-style-search/commit/f451b8bb905781a467084cfc245510c05c3ee77f))
+* update release configuration to set default bump to patch and include commits without labels ([ede103a](https://github.com/snowflake-hd/nix-style-search/commit/ede103a3b0e61869cfab99f764bc8bed4d2dd0cb))
+
 ## [1.1.0](https://github.com/snowflake-hd/nix-style-search/compare/v1.0.0...v1.1.0) (2026-01-11)
 
 
