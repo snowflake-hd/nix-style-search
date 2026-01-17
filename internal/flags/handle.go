@@ -28,5 +28,5 @@ func printHelp() {
 	fmt.Println("Options:")
 	fmt.Println("  -h, --help\t\tShow help")
 	fmt.Println()
-	fmt.Println("While searching for packages use <tab> to see more details about the selected package.")
+	fmt.Println("While searching for packages use Tab to see more details about the selected package.")
 }
