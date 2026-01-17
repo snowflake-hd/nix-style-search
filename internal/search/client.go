@@ -2,7 +2,7 @@ package search
 
 import (
 	"net/http"
-	internal "nix-style-search/internal"
+	"nix-style-search/internal"
 )
 
 var HttpClient = &http.Client{}
