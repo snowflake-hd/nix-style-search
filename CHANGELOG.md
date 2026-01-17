@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/snowflake-hd/nix-style-search/compare/v1.1.1...v1.1.2) (2026-01-17)
+
+
+### Bug Fixes
+
+* update .gitignore to include notes directory and vendor files ([dfda1ff](https://github.com/snowflake-hd/nix-style-search/commit/dfda1ff2ec43ce776f6dc5918a7bf0b769c66df2))
+
 ## [1.1.1](https://github.com/snowflake-hd/nix-style-search/compare/v1.1.0...v1.1.1) (2026-01-17)
 
 
