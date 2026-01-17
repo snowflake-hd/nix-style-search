@@ -1,10 +1,11 @@
 package search
 
 import (
-	"NixStyleSearch/internal"
-	"NixStyleSearch/internal/search"
 	"fmt"
 	"strings"
+
+	"nix-style-search/internal"
+	"nix-style-search/internal/search"
 
 	"github.com/atotto/clipboard"
 )

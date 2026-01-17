@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"NixStyleSearch/internal/search"
+	"nix-style-search/internal/search"
 )
 
 func TestCleanAliasFiltersHidden(t *testing.T) {

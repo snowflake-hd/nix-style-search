@@ -1,9 +1,10 @@
 package index
 
 import (
-	"NixStyleSearch/internal"
 	"fmt"
 	"strings"
+
+	"nix-style-search/internal"
 )
 
 func (i Screen) View() string {

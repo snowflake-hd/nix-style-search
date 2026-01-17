@@ -1,9 +1,10 @@
 package search
 
 import (
-	"NixStyleSearch/internal/search"
 	"errors"
 	"testing"
+
+	"nix-style-search/internal/search"
 )
 
 func TestFetchForwardNoOverlap(t *testing.T) {

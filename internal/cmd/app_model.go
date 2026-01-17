@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"NixStyleSearch/internal/cmd/index"
-	"NixStyleSearch/internal/cmd/search"
+	"nix-style-search/internal/cmd/index"
+	"nix-style-search/internal/cmd/search"
 
 	tea "github.com/charmbracelet/bubbletea"
 )

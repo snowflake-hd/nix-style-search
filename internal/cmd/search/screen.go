@@ -1,13 +1,13 @@
 package search
 
 import (
-	"NixStyleSearch/internal"
-	"NixStyleSearch/internal/search"
 	"strings"
 	"time"
 
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
+	"nix-style-search/internal"
+	"nix-style-search/internal/search"
 )
 
 const (

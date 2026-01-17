@@ -1,7 +1,7 @@
 package index
 
 import (
-	"NixStyleSearch/internal/search"
+	"nix-style-search/internal/search"
 )
 
 var fetchAliases = search.GetAvailableIndices

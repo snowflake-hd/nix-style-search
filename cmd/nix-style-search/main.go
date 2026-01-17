@@ -1,8 +1,8 @@
 package main
 
 import (
-	"NixStyleSearch/internal/cmd"
-	"NixStyleSearch/internal/flags"
+	"nix-style-search/internal/cmd"
+	"nix-style-search/internal/flags"
 
 	tea "github.com/charmbracelet/bubbletea"
 )

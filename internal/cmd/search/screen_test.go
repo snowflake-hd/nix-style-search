@@ -1,10 +1,10 @@
 package search
 
 import (
-	"NixStyleSearch/internal/search"
 	"testing"
 
 	tea "github.com/charmbracelet/bubbletea"
+	"nix-style-search/internal/search"
 )
 
 func TestScreenUpdateCursorMovement(t *testing.T) {

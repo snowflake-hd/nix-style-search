@@ -1,12 +1,13 @@
 package search
 
 import (
-	"NixStyleSearch/internal"
 	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
+
+	"nix-style-search/internal"
 )
 
 type Response struct {

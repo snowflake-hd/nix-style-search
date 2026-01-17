@@ -1,8 +1,9 @@
 package search
 
 import (
-	"NixStyleSearch/internal/search"
 	"strings"
+
+	"nix-style-search/internal/search"
 )
 
 var searchPageFn = searchPage

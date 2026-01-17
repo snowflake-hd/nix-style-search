@@ -1,12 +1,13 @@
 package search
 
 import (
-	"NixStyleSearch/internal"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
 	"strings"
+
+	"nix-style-search/internal"
 )
 
 type Alias struct {

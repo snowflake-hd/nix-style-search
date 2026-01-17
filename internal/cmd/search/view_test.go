@@ -1,9 +1,10 @@
 package search
 
 import (
-	"NixStyleSearch/internal/search"
 	"strings"
 	"testing"
+
+	"nix-style-search/internal/search"
 )
 
 func TestFirstNonEmpty(t *testing.T) {
