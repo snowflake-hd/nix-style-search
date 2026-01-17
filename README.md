@@ -11,20 +11,6 @@ StyleSearch is a command-line tool that provides a prettier, interactive alterna
 - View package details (version, description, homepage, license, etc.)
 - Copy package identifiers directly to your clipboard
 
-## Screenshots
-
-**Index Selection Screen:**
-![Index Selection](images/index_selection.png)
-
-**Empty Search:**
-![Empty Search](images/empty_search.png)
-
-**Search Results (No Details):**
-![Search Results](images/search_no_details.png)
-
-**Search Results (With Details):**
-![Search With Details](images/search_with_details.png)
-
 ## Features
 
 - Fast, debounced search
@@ -76,6 +62,31 @@ StyleSearch queries the official NixOS search backend API (the same one that pow
 ```bash
 go build -o nix-style-search ./cmd/nix-style-search
 ```
+
+## Screenshots 
+
+**Index Selection Screen:**
+
+![Index Selection](images/index_selection.png)
+
+---
+
+**Empty Search:**
+
+![Empty Search](images/empty_search.png)
+
+---
+
+**Search Results (No Details):**
+
+![Search Results](images/search_no_details.png)
+
+---
+
+**Search Results (With Details):**
+
+![Search With Details](images/search_with_details.png)
+
 
 ## License
 
