@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/snowflake-hd/nix-style-search/compare/v1.1.2...v1.1.3) (2026-01-17)
+
+
+### Bug Fixes
+
+* readme ([cc68b4d](https://github.com/snowflake-hd/nix-style-search/commit/cc68b4d92f0d0dfc690e77b9a9a4a87f5d1e3f13))
+* readme ([254070d](https://github.com/snowflake-hd/nix-style-search/commit/254070de06db2d15d1b4018484bbbd19ab3ed2dd))
+
 ## [1.1.2](https://github.com/snowflake-hd/nix-style-search/compare/v1.1.1...v1.1.2) (2026-01-17)
 
 
