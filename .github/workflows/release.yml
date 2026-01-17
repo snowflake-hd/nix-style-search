@@ -33,15 +33,23 @@ jobs:
         if: steps.release.outputs.release_created == 'true'
         run: |
           mkdir -p dist
-
-          GOOS=linux   GOARCH=amd64 go build -o dist/nix-style-search-linux-amd64 ./cmd/nix-style-search
-          GOOS=darwin  GOARCH=amd64 go build -o dist/nix-style-search-darwin-amd64 ./cmd/nix-style-search
-          GOOS=darwin  GOARCH=arm64 go build -o dist/nix-style-search-darwin-arm64 ./cmd/nix-style-search
-          GOOS=windows GOARCH=amd64 go build -o dist/nix-style-search-windows-amd64.exe ./cmd/nix-style-search
+          
+          echo "Building binaries..."
+          
+          GOOS=linux   GOARCH=amd64   go build -o dist/nix-style-search-linux-amd64 ./cmd/nix-style-search
+          GOOS=linux   GOARCH=arm64   go build -o dist/nix-style-search-linux-arm64 ./cmd/nix-style-search
+          GOOS=linux   GOARCH=386     go build -o dist/nix-style-search-linux-386 ./cmd/nix-style-search
+          
+          echo "Generating checksums..."
+          cd dist && sha256sum * > SHA256SUMS && cd ..
+          
+          ls -lah dist/
 
       - name: Upload release assets
         if: steps.release.outputs.release_created == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.release.outputs.tag_name }}
-          files: dist/*
+          files: |
+            dist/nix-style-search-*
+            dist/SHA256SUMS
